@@ -9,33 +9,50 @@
   </parent>
 
 
-  <groupId>com.algorithms</groupId>
   <artifactId>sum_abs_max_d</artifactId>
-  <version>1.0</version>
   <name>sum_abs_max_d</name>
   
   <dependencies>
-    <dependency>
+  	<dependency>
       <groupId>com.algorithms</groupId>
-  	  <artifactId>common</artifactId>
-  	  <version>1.0</version>
-  	</dependency>
+      <artifactId>utils</artifactId>
+      <version>1.0</version>
+    </dependency>
 
     <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-engine</artifactId>
         <scope>test</scope>
     </dependency>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <scope>test</scope>
+    </dependency>
   </dependencies>
   
   <build>
     <finalName>sum_abc_max_d</finalName>
+    <sourceDirectory>src/main/java</sourceDirectory>
+    <testSourceDirectory>src/test/java</testSourceDirectory>
     <plugins>
+      <plugin>
+	    <groupId>org.apache.maven.plugins</groupId>
+	 	<artifactId>maven-jar-plugin</artifactId>
+		<version>2.4</version>
+		<configuration>
+	  	  <archive>
+		    <manifest>
+			  <mainClass>com.algorithms.sum_abc_max_d.Calculator</mainClass>
+			</manifest>
+          </archive>
+		</configuration>
+	  </plugin>
       <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.0.0-M3</version>
-     </plugin>
+      </plugin>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>

@@ -3,8 +3,8 @@ package com.algorithms.sum_abc_max_d;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.algorithms.common.generators.RandomListGenerator;
-import com.algorithms.common.utils.FileUtils;
+import com.algorithms.utils.FileUtils;
+import com.algorithms.utils.generators.RandomListGenerator;
 
 public class Calculator {
 	private final static long FROM_NUMBER = -100;
