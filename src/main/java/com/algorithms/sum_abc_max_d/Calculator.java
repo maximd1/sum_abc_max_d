@@ -24,6 +24,13 @@ public class Calculator {
 		System.out.println("D=" + D);
 	}
 
+	/**
+	 * We take latest max and previous before it, calculate difference (D-C)
+	 * Then scan array from the beginning up to the element C (from 0 to C, A+B)
+	 * If A+B is negative, then we need to swap D & C.
+	 * @param start (latest element from which we start scan for D-C
+	 * @return max D
+	 */
 	public Long calculateMaxD(int start) {
 		if(start - 1 == 0) {
 			return null;
@@ -31,15 +38,15 @@ public class Calculator {
 
 		List<Long> list = this.getList();
 		Long D = list.get(start-1); // latest max
-		long C = 0; // previous latest max
-		long DminusC = 0;
+		Long C = 0L; // previous latest max
+		Long DminusC = 0L;
 
 		for(int i = start-1; i >= 1; i--) {
 			C = list.get(i-1);
 			DminusC = D-C;
-			if( leftSum(0, start-1, DminusC) ) {
+			if( leftSum(0, i-1, DminusC) ) {
 				if( isNegative ) {
-					long temp = C;
+					Long temp = C;
 					C = D;
 					D = temp;
 				}

@@ -30,6 +30,5 @@ public class CalculatorTest {
 		calculator.setList(Arrays.asList(-100L, -1L, 0L, 7L, 101L));
 		Long D = calculator.calculateMaxD(calculator.getList().size());
 		assertEquals(0, D.longValue());
-		
 	}
 }
