@@ -1,4 +1,4 @@
-﻿package com.algorithms.sum_abc_max_d;
+package com.algorithms.sum_abc_max_d;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
